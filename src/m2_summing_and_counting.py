@@ -222,12 +222,33 @@ def run_test_count_sines_vs_cosines():
     # TODO: 6 (continued).
     # Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
-
+    expected_2=1
+    answer_2=count_sines_vs_cosines(1)
+    print('Test 2 expected',expected_2)
+    print('Test 2 actual',answer_2)
+    expected_3=2
+    answer_3=count_sines_vs_cosines(2)
+    print('Test 3 expected',expected_3)
+    print('Test 3 actual',answer_3)
+    expected_4=4
+    answer_4=count_sines_vs_cosines(3)
+    print('Test 4 expected',expected_4)
+    print('Test 4 actual',answer_4)
+    expected_5=5
+    answer_5=count_sines_vs_cosines(4)
+    print('Test 5 expected',expected_5)
+    print('Test 5 actual',answer_5)
+    expected_6=6
+    answer_6=count_sines_vs_cosines(6)
+    print('Test 6 expected',expected_6)
+    print('Test 6 actual',answer_6)
 
 def count_sines_vs_cosines(m):
     count=0
-    for k in range(-m,m):
-
+    for k in range(-m,m+1):
+        if math.sin(k)>math.cos(k):
+            count=count+1
+    return count
     """
     What comes in:  A non-negative integer m.
     What goes out:  Returns the number of integers from -m to m,
